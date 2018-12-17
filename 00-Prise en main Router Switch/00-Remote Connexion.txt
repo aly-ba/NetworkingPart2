@@ -1,0 +1,17 @@
+#Console de connection 
+Router > en 
+--configuraiton connexion telnet 
+connexion telnet 
+telnet ipaddr
+sh run 
+
+connexion console : 4 connexions simultanées 
+line vty  0 4 
+--password remote access
+passwod cisco 
+
+---Telnet cess
+telnet remoteipaddress host
+
+
+

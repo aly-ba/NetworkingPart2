@@ -1,0 +1,7 @@
+#configuration console  
+
+>Config t 
+>line ?
+>line console  0
+>login 
+>password cisco
