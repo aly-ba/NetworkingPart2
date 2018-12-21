@@ -1,0 +1,28 @@
+he netsh interface ipv6 command context contains many commands that are useful for analyzing the current IPv6 configuration and troubleshooting problems. The most useful commands are:
+
+• netsh interface ipv6 show global. Displays general IPv6 settings, including the default hop limit. Though you rarely need to modify these settings, you can use the netsh interface ipv6 set global command to change them.
+
+• netsh interface ipv6 show addresses. Displays all IPv6 addresses in a much more compact format than ipconfig /all.
+
+• netsh interface ipv6 show dnsservers. Displays all DNS servers that have been configured for IPv6. This does not display any DNS servers that might be configured with IPv4 addresses.
+
+• netsh interface ipv6 show potentialrouters. Displays all advertising IPv6 routers that have been detected on the local network.
+
+• netsh interface ipv6 show route. Lists the automatically and manually configured routes, including tunneling routes.
+
+• netsh interface ipv6 show tcpstats. Lists various IPv6 TCP statistics, including the current number of connections, the total number of both incoming and outgoing connections, and the number of communication errors.
+
+• netsh interface ipv6 show udpstats. Lists various IPv6 UDP statistics, including the number of UDP datagrams that have been sent or received and the number of datagrams that resulted in an error.
+
+• netsh interface ipv6 show neighbors. Displays all cached IPv6 neighbors. To flush the neighbor cache, run the command netsh interface ipv6 delete neighbors.
+
+• netsh interface ipv6 show destinationcache. Displays all cached IPv6 hosts that the computer has communicated with. To flush the destination cache, run the command netsh interface ipv6 delete destinationcache.
+
+
+When troubleshooting IPv6 transition technologies, you can use the following commands:
+
+• netsh interface ipv6 show teredo. Displays the Teredo configuration, including the Teredo server name and the client port number. You can use the netsh interface ipv6 set teredo command to change these configuration settings.
+
+• netsh interface ipv6 6to4 show command. By using one of the four commands in this context (interface, relay, routing, and state), you can examine the current 6to4 configuration.
+
+• netsh interface isatap show command. By using one of the two co

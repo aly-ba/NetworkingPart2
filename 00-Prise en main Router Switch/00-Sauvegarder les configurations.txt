@@ -1,8 +1,0 @@
->copy running-config startup-config
-OR
->write memory
->wr
->
->
->
->

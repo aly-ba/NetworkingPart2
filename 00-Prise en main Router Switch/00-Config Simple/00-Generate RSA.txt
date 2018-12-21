@@ -1,0 +1,11 @@
+-crypto  key generate RSA
+Sw_A_AJOUR(config)#username  admin
+Sw_A_AJOUR(config)#enable secret cisco 
+Sw_A_AJOUR(config)#usename admin secret cisco
+                      ^
+% Invalid input detected at '^' marker.
+	
+Sw_A_AJOUR(config)#username admin secret cisco
+Sw_A_AJOUR(config)#line vty 0 15 
+Sw_A_AJOUR(config-line)#login local
+Sw_A_AJOUR(config-line)#

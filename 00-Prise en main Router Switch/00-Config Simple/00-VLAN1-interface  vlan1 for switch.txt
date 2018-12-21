@@ -1,0 +1,9 @@
+Sw_A_AJOUR(config)#interface vlan1
+Sw_A_AJOUR(config-if)#ip address 192.168.1.250 255.255.255.0
+Sw_A_AJOUR(config-if)#no shut
+
+Sw_A_AJOUR(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+Sw_A_AJOUR(config-if)#
+Sw_A_AJOUR(config-if)#

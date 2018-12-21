@@ -1,0 +1,93 @@
+Basic Devise Seting
+	1) Host Names
+
+
+Sources : David BOMBAL
+
+
+Router 1
+Router>?
+Exec commands:
+<1-99> Session number to resume
+connect Open a terminal connection
+disable Turn off privileged commands
+disconnect Disconnect an existing network connection
+enable Turn on privileged commands
+exit Exit from the EXEC
+logout Exit from the EXEC
+ping Send echo messages
+resume Resume an active network connection
+show Show running system information
+ssh Open a secure shell client connection
+telnet Open a telnet connection
+terminal Set terminal line parameters
+traceroute Trace route to destination
+Router>en
+Router#config t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#host Router1
+Router1(config)#
+Router1#
+%SYS-5-CONFIG_I: Configured from console by console
+End
+Router2#SH IP INT BRIEF
+Interface IP-Address OK? Method Status Protocol 
+GigabitEthernet0/0/0 unassigned YES unset administratively down down 
+GigabitEthernet0/0/1 unassigned YES unset administratively down down 
+Vlan1 unassigned YES unset administratively down down
+
+Router1>en
+Router1#config t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router1(config)#int gig
+Router1(config)#int gigabitEthernet 0/0/0
+Router1(config-if)#
+Router1(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to up
+end
+Router1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router1#sh ip int brief
+Interface IP-Address OK? Method Status Protocol 
+GigabitEthernet0/0/0 unassigned YES unset up up 
+GigabitEthernet0/0/1 unassigned YES unset administratively down down 
+Vlan1 unassigned YES unset administratively down down
+Router1#
+Router1#ip add ?
+% Unrecognized command
+Router1#config t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router1(config)#ip add ?
+% Unrecognized command
+Router1(config)#ip add 
+^
+% Invalid input detected at '^' marker.
+Router1(config)#int g0/0/0
+Router1(config-if)#ip add ?
+A.B.C.D IP address
+dhcp IP Address negotiated via DHCP
+Router1(config-if)#ip add 
+% Incomplete command.
+Router1(config-if)#ip address 10.1.1.1
+% Incomplete command.
+Router1(config-if)#ip address 10.1.1.1 ?
+A.B.C.D IP subnet mask
+Router1(config-if)#ip address 10.1.1.1 255.255.255.0
+Router1(config-if)#
+
+--Commande: 
+Sh arp
+
+--Mot de passe en clair sur le routeur 
+Enable password  to connect to cisco:
+Configuration :
+Enable ?
+Enable password ? 
+Enable password cisco 
+
+---Mot de passe encrypted
+#service  ?
+#service password-encryption 
